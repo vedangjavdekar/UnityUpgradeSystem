@@ -10,8 +10,6 @@ This project also comes with a little helper template for making generation of t
 
 ## Steps to create a new upgrade item
 
----
-
 -   Move the folder named **"ScriptTemplates"** to the **"{Your Unity Project}/Assets/ScriptTemplates"**.
 
 -   Restart the Unity Editor.
@@ -78,4 +76,4 @@ This project also comes with a little helper template for making generation of t
     }
     ```
 
-## We now have an upgrade system. Create the relevant Scriptable Objects and configure them however you like!
+**We now have an upgrade system. Create the relevant Scriptable Objects and configure them however you like!**
