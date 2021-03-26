@@ -1,0 +1,26 @@
+using UnityEngine;
+using UnityEditor;
+
+[CustomEditor(typeof())]
+public class #SCRIPTNAME# : UpgradeItemEditor
+{
+	protected override void OnEnable()
+	{
+		// Specify the line height for the Reorderable List
+		base.OnEnable();
+        list.elementHeight = EditorGUIUtility.singleLineHeight;
+	}
+
+	protected override void DrawListItems(Rect rect, int index, bool isActive, bool isFocused)
+    {
+		// The actual GUI inside of the Reorderable List
+		// Your code here ...
+	}
+
+
+	protected override void DrawHeader(Rect rect)
+    {
+		// The header of the Reorderable List
+        EditorGUI.LabelField(rect, "Upgrade Levels");
+    }
+}

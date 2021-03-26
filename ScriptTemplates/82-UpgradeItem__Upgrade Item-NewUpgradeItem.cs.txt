@@ -1,0 +1,38 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+// Your Upgrade Data Struct here ...
+public struct YourDataStruct
+{
+}
+
+[CreateAssetMenu(fileName = "", menuName = "")]
+public class #SCRIPTNAME# : UpgradeItem,IUpgradeItemMethods
+{
+    public bool canUpgrade
+    {
+        get
+        {
+            return currentLevel + 1 < upgradeLevels.Count;
+        }
+    }
+
+    public bool reachedMaxLevel
+    {
+        get
+        {
+            return currentLevel >= upgradeLevels.Count - 1;
+        }
+    }
+
+    public void Upgrade()
+    {
+        if (canUpgrade)
+        {
+            currentLevel++;
+        }
+    }
+
+    // To use the class, Update the type with your Upgrade Data Struct
+    public List<YourDataStruct> upgradeLevels = new List<YourDataStruct>();
+}
