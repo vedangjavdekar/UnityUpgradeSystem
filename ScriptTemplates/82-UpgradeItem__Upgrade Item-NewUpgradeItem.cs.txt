@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Your Upgrade Data Struct here ...
+[System.Serializable]
 public struct YourDataStruct
 {
 }
