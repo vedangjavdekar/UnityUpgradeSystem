@@ -8,9 +8,9 @@ public struct YourDataStruct
 }
 
 [CreateAssetMenu(fileName = "", menuName = "")]
-public class #SCRIPTNAME# : UpgradeItem,IUpgradeItemMethods
+public class #SCRIPTNAME# : UpgradeItem
 {
-    public bool canUpgrade
+    public override bool canUpgrade
     {
         get
         {
@@ -18,19 +18,11 @@ public class #SCRIPTNAME# : UpgradeItem,IUpgradeItemMethods
         }
     }
 
-    public bool reachedMaxLevel
+    public override bool reachedMaxLevel
     {
         get
         {
             return currentLevel >= upgradeLevels.Count - 1;
-        }
-    }
-
-    public void Upgrade()
-    {
-        if (canUpgrade)
-        {
-            currentLevel++;
         }
     }
 

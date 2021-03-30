@@ -15,6 +15,7 @@ public class #SCRIPTNAME# : UpgradeItemEditor
     {
 		// The actual GUI inside of the Reorderable List
 		// Your code here ...
+		SerializedProperty element = list.serializedProperty.GetArrayElementAtIndex(index);
 	}
 
 
