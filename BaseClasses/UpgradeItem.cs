@@ -17,4 +17,9 @@ public abstract class UpgradeItem : ScriptableObject, IUpgradeItemMethods
             currentLevel++;
         }
     }
+
+    private void OnValidate()
+    {
+        currentLevel = Mathf.Max(currentLevel, 0);
+    }
 }

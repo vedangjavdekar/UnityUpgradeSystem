@@ -5,9 +5,10 @@ using UnityEngine;
 [System.Serializable]
 public struct YourDataStruct
 {
+    //Keep your data public so that editor scripts can access the properties.
 }
 
-[CreateAssetMenu(fileName = "", menuName = "")]
+[CreateAssetMenu(fileName = "#SCRIPTNAME#", menuName = "Upgrades/#SCRIPTNAME#")]
 public class #SCRIPTNAME# : UpgradeItem
 {
     public override bool canUpgrade

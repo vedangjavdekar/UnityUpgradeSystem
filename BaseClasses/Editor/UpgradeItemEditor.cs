@@ -27,7 +27,7 @@ public abstract class UpgradeItemEditor : Editor
         EditorGUILayout.Space(10);
 
         EditorGUILayout.PrefixLabel("CurrentLevel");
-        serializedObject.FindProperty("currentLevel").intValue = EditorGUILayout.IntSlider(serializedObject.FindProperty("currentLevel").intValue, 0, serializedObject.FindProperty("upgradeLevels").arraySize-1);
+        serializedObject.FindProperty("currentLevel").intValue = EditorGUILayout.IntSlider(serializedObject.FindProperty("currentLevel").intValue, 0, Mathf.Max(serializedObject.FindProperty("upgradeLevels").arraySize-1,0));
         EditorGUILayout.Space(10);
 
         list.DoLayoutList();

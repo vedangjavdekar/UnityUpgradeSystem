@@ -16,6 +16,15 @@ public class #SCRIPTNAME# : UpgradeItemEditor
 		// The actual GUI inside of the Reorderable List
 		// Your code here ...
 		SerializedProperty element = list.serializedProperty.GetArrayElementAtIndex(index);
+        Rect singleLineRect = rect;
+        singleLineRect.height = EditorGUIUtility.singleLineHeight;
+
+        if (index != 0)
+            EditorGUI.LabelField(singleLineRect, $"Upgrade Level {index}",EditorStyles.boldLabel);
+        else
+            EditorGUI.LabelField(singleLineRect, "Default Level", EditorStyles.boldLabel);
+
+		singleLineRect.y += EditorGUIUtility.singleLineHeight;
 	}
 
 
